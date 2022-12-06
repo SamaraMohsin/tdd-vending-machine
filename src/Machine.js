@@ -10,4 +10,60 @@ module.exports = class Machine {
         // console.log(33)
         return this.items;
     }
+
+    customerCredit(){
+        cashList = [10,20,50,70,100];
+
+    }
+
+
+    displayMenu(money){
+        
+        let response = '';
+        if(money === 10){
+            
+            // console.log(this.items[2])
+            // console.log("You don't have enough credit to purchase anything")
+            response = "You have deposited" + money
+            return response
+        }
+        else if (money === 20){
+            // console.log("You don't have enough credit to purchase anything")
+            // console.log(this.items[0,2])
+            // response = "You don't have enough credit to purchase anything"
+            response = "You have deposited" + money
+            return response
+
+        }
+        else if(money === 50){
+            // console.log(this.items[0,1,2])
+            // console.log("You don't have enough credit to purchase anything")
+            // response = "You don't have enough credit to purchase anything"
+            response = "You have deposited" + money
+            return response
+
+        }
+        else if(money === 100){
+            // console.log(this.items[0])
+            response = "You have deposited"+ money
+            // response = this.items[0]
+            return response
+
+        }
+        else if (money === 500){
+            // console.log(this.items[0,2])
+            // response = this.items[0,2]
+            response = "You have deposited" + money
+            return response
+
+        }
+        else{
+            console.log("You don't have enough credit to purchase anything")
+            check = false;
+            return response
+        }
+
+        } 
+
+
 };
