@@ -48,7 +48,7 @@ describe('the vending machine', () => {
         // setup
         const machine = new Machine();
         const expected =  'Chocolate are unavailable';
-        const code = 1;
+        const code = 2;
 
         // exercise
         const actual =  machine.unavailableItem(code);
