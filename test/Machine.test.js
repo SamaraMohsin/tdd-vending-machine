@@ -18,11 +18,26 @@ describe('the vending machine', () => {
     it('Display money and Show the menu accordingly', () => {
         // setup
         const machine = new Machine();
-        const money = 50;
+        const money = 100;
         const expected = "You have deposited" + money;
 
         // exercise
         const actual =  machine.displayMenu(money);
+
+        // assert
+        expect(expected).toEqual(actual);
+    });
+
+    // 3rd AC
+    it('Additional Money', () => {
+        // setup
+        const machine = new Machine();
+        const money = 100;
+        const money2 = 50;
+        const expected =  money+ money2;
+
+        // exercise
+        const actual =  machine.additionalMoney(money2);
 
         // assert
         expect(expected).toEqual(actual);

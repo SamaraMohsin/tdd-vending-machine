@@ -1,3 +1,4 @@
+let var1;
 module.exports = class Machine {
     constructor() {
         this.items = [{'crisps': 100}, {'chocolate': 350}, {'mints': 70}];
@@ -18,6 +19,8 @@ module.exports = class Machine {
 
 
     displayMenu(money){
+
+        var1 = money;
         
         let response = '';
         if(money === 10){
@@ -58,12 +61,20 @@ module.exports = class Machine {
 
         }
         else{
-            console.log("You don't have enough credit to purchase anything")
-            check = false;
+            response = "You have deposited" + money
+            // check = false;
             return response
         }
 
         } 
+
+
+
+        additionalMoney(money2){
+            let additionalmoney = parseInt(var1)+parseInt(money2);
+            return additionalmoney;
+
+        }
 
 
 };
