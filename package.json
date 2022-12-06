@@ -1,10 +1,10 @@
 {
   "name": "vending-machine",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "Machine.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest test/*.test.js"
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^24.9.0"
