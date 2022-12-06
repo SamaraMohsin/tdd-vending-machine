@@ -68,13 +68,28 @@ module.exports = class Machine {
 
         } 
 
-
-
         additionalMoney(money2){
             let additionalmoney = parseInt(var1)+parseInt(money2);
             return additionalmoney;
 
         }
 
+        unavailableItem(code){
+            // 1 for crisps 
+            // 2 for chocolate
+            // 3 for mints
+            if(code === 1){
+                return('Crisps are available')
+
+            }
+            else if(code === 2){
+                return('Chocolate are unavailable')
+
+            }
+            else{
+                return('Mints are available')
+            }
+
+        }
 
 };

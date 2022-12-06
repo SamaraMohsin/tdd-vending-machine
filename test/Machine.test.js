@@ -43,4 +43,19 @@ describe('the vending machine', () => {
         expect(expected).toEqual(actual);
     });
 
+    // 4th AC
+    it('Unavailable Item', () => {
+        // setup
+        const machine = new Machine();
+        const expected =  'Chocolate are unavailable';
+        const code = 1;
+
+        // exercise
+        const actual =  machine.unavailableItem(code);
+
+        // assert
+        expect(expected).toEqual(actual);
+    });
+
+
 });
