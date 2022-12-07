@@ -1,7 +1,3 @@
-let var1;
-// let price1 =70;
-// let price2 =100;
-// let proce3 =350;
 class Machine {
   constructor() {
     this.items = [{ crisps: 100 }, { chocolate: 350 }, { mints: 70 }];
@@ -20,9 +16,13 @@ class Machine {
 
   // 4TH CASE
   selectItem(code) {
-    this.items.push(0);
-    if (JSON.stringify(this.items[code]) === "{}") {
+    // this.items.push({});
+    // if (JSON.stringify(this.items[code]) === "{}")
+    if (this.items[code] === undefined) {
       return "The item you selected is unavailable";
+    }
+    // 5th case
+    else {
     }
   }
 }

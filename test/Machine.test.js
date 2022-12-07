@@ -48,11 +48,11 @@ describe("the vending machine", () => {
     // setup
     const machine = new Machine();
     machine.items.push({}); //I am creating a setup where I am assuming that I have an unavailable item in my list
-    const actual = "The item you selected is unavailable";
+    const expected = "The item you selected is unavailable";
     // exercise
-    const expected = machine.selectItem(3);
+    const actual = machine.selectItem(100);
     // assert
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
 
   // 5th Case
