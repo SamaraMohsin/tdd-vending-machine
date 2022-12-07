@@ -20,10 +20,8 @@ describe("the vending machine", () => {
     const machine = new Machine();
     const money = 100;
     const expected = "You have deposited Rs " + money;
-
     // exercise
     const actual = machine.deposit(money);
-
     // assert
     expect(expected).toEqual(actual);
   });
@@ -55,33 +53,32 @@ describe("the vending machine", () => {
     expect(actual).toEqual(expected);
   });
 
-  // 5th Case
-  // it('Insufficient Balance', () => {
-  //     // setup
-  //     const machine = new Machine();
-  //     const actual =  'Your deposit is insufficient.  Please add Rs 20 for this item';
-  //     const code = 3;
-  //     machine.deposit(50)
-
-  //     // exercise
-  //     const expected =  machine.selectItem(code);
-
-  //     // assert
-  //     expect(expected).toEqual(actual);
-  // });
+  //5th Case
+  it("Insufficient Balance", () => {
+    // setup
+    const machine = new Machine();
+    const expected =
+      "Your deposit is insufficient.  Please add Rs 20 for this item";
+    const code = 2;
+    // exercise
+    machine.deposit(50);
+    const actual = machine.selectItem(code);
+    // assert
+    expect(actual).toEqual(expected);
+  });
 
   // 6th Case
-  //  it('Return Change', () => {
-  //     // setup
-  //     const machine = new Machine();
-  //     const actual =  {item: 'mints', change: [20, 10]};
-  //     const code = 3;
-  //     machine.deposit(100)
+  it("Return Change", () => {
+    // setup
+    const machine = new Machine();
+    const expected = { item: "mints", change: [100, 100, 100, 100, 20, 10] };
+    const code = 2;
+    machine.deposit(500);
 
-  //     // exercise
-  //     const expected =  machine.selectItem(code);
+    // exercise
+    const actual = machine.selectItem(code);
 
-  //     // assert
-  //     expect(expected).toEqual(actual);
-  // });
+    // assert
+    expect(actual).toEqual(expected);
+  });
 });
