@@ -43,19 +43,35 @@ describe('the vending machine', () => {
         expect(expected).toEqual(actual);
     });
 
-    // // 4th AC
-    // it('Unavailable Item', () => {
-    //     // setup
-    //     const machine = new Machine();
-    //     const expected =  'Chocolate are unavailable';
-    //     const code = 2;
+    // 4th AC
+    it('Unavailable Item', () => {
+        // setup
+        const machine = new Machine();
+        const actual =  'Chocolate are unavailable';
+        const code = 2;
 
-    //     // exercise
-    //     const actual =  machine.unavailableItem(code);
+        // exercise
+        const expected =  machine.selectItem(code);
 
-    //     // assert
-    //     expect(expected).toEqual(actual);
-    // });
+        // assert
+        expect(expected).toEqual(actual);
+    });
+
+    // 5th Case
+    it('Insufficient Balance', () => {
+        // setup
+        const machine = new Machine();
+        const actual =  'Your deposit is insufficient.  Please add Rs 20 for this item';
+        const code = 3;
+        machine.deposit(50)
+
+        // exercise
+        const expected =  machine.selectItem(code);
+
+        // assert
+        expect(expected).toEqual(actual);
+    });
+
 
 
 });

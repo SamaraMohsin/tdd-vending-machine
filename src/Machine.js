@@ -25,44 +25,26 @@ module.exports = class Machine {
             // 2 for chocolate
             // 3 for mints
             if(code === 1){
-                return('Crisps are available')
+                if (this.total_deposit < 100){
+                    let mymoney =  Math.abs(ths.items[0]['crisps']-this.total_deposit);
+                    return `Your deposit is insufficient.  Please add ${mymoney} for this item`
+                }
 
             }
             else if(code === 2){
                 return('Chocolate are unavailable')
 
             }
-            else{
-                return('Mints are available')
+            else if(code === 3){
+                if (this.total_deposit < 70){
+                    let mymoney =  Math.abs(this.items[2]['mints']-this.total_deposit);
+                    return `Your deposit is insufficient.  Please add Rs ${mymoney} for this item`
+                }
+
             }
 
         }
 
 
-        // 5th case in progress
-        selectItem(code){
-            if(code ===1){
-                if (money3<100){
-                    let mymoney = price1
-                    return "Your deposit is insufficient.  Please add"+ mymoney +"for this item"
-                }
-            else if(code ===2){
-                    let mymoney = price2
-                    return "Your deposit is insufficient.  Please add"+ mymoney +"for this item"
-                }
-            else if(code ===3){
-                let mymoney = price2
-                    return "Your deposit is insufficient.  Please add"+ mymoney +"for this item"
-            }    
-            }
-            else if(code === 2){
-                return('Chocolate are unavailable')
-
-            }
-            else{
-                return('Mints are available')
-            }
-           
-        }
-
+        
 };
