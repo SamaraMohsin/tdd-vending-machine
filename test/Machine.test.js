@@ -28,20 +28,20 @@ describe('the vending machine', () => {
         expect(expected).toEqual(actual);
     });
 
-    // // 3rd AC
-    // it('Additional Money', () => {
-    //     // setup
-    //     const machine = new Machine();
-    //     const money = 100;
-    //     const money2 = 50;
-    //     const expected =  money+ money2;
+    // 3rd AC
+    it('Additional Money', () => {
+        // setup
+        const machine = new Machine();
+        const money= 100;
+        machine.deposit(money)
+        // machine.deposit(50)
+        const actual = "You have deposited Rs 150"
+        // exercise
+        const expected =  machine.deposit(50);
 
-    //     // exercise
-    //     const actual =  machine.additionalMoney(money2);
-
-    //     // assert
-    //     expect(expected).toEqual(actual);
-    // });
+        // assert
+        expect(expected).toEqual(actual);
+    });
 
     // // 4th AC
     // it('Unavailable Item', () => {

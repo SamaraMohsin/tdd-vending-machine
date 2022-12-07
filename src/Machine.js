@@ -13,68 +13,14 @@ module.exports = class Machine {
         return this.items;
     }
 
-    // displayMenu(money){
-
-    //     var1 = money;
-        
-    //     let response = '';
-    //     if(money === 10){
-            
-    //         // console.log(this.items[2])
-    //         // console.log("You don't have enough credit to purchase anything")
-    //         response = "You have deposited" + money
-    //         return response
-    //     }
-    //     else if (money === 20){
-    //         // console.log("You don't have enough credit to purchase anything")
-    //         // console.log(this.items[0,2])
-    //         // response = "You don't have enough credit to purchase anything"
-    //         response = "You have deposited" + money
-    //         return response
-
-    //     }
-    //     else if(money === 50){
-    //         // console.log(this.items[0,1,2])
-    //         // console.log("You don't have enough credit to purchase anything")
-    //         // response = "You don't have enough credit to purchase anything"
-    //         response = "You have deposited" + money
-    //         return response
-
-    //     }
-    //     else if(money === 100){
-    //         // console.log(this.items[0])
-    //         response = "You have deposited"+ money
-    //         // response = this.items[0]
-    //         return response
-
-    //     }
-    //     else if (money === 500){
-    //         // console.log(this.items[0,2])
-    //         // response = this.items[0,2]
-    //         response = "You have deposited" + money
-    //         return response
-
-    //     }
-    //     else{
-    //         response = "You have deposited" + money
-    //         // check = false;
-    //         return response
-    //     }
-
-    //     } 
-
+    // 2nd AC, 3rd AC
     deposit(denomination){
         this.total_deposit += denomination;
-        return "You have deposited Rs "+this.total_deposit;
+        return `You have deposited Rs ${this.total_deposit}`;
     }
 
-        additionalMoney(money2){
-            let additionalmoney = parseInt(var1)+parseInt(money2);
-            return additionalmoney;
-
-        }
-
-        unavailableItem(code){
+    // 4TH CASE
+    selectItem(code){
             // 1 for crisps 
             // 2 for chocolate
             // 3 for mints
@@ -91,6 +37,7 @@ module.exports = class Machine {
             }
 
         }
+
 
         // 5th case in progress
         selectItem(code){
