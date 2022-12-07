@@ -1,4 +1,5 @@
 ## TDD Vending Machine
+## Authors Samara Moshin & Muhammad Hassan Raza
 
 ### Objectives:
 

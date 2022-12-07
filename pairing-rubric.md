@@ -1,8 +1,8 @@
 # Pairing Rubric
 
-Your Name: _________________________________________
+Your Name: __________Muhammad Hassan Raza_______________________________
 
-Pair's Name: ________________________________________
+Pair's Name: _________________Samara Moshin_______________________
 
 | Pairing Behavior | Needs Improvement | In Between | Desirable |
 | --- | --- | --- | --- | 

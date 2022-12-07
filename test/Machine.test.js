@@ -19,43 +19,43 @@ describe('the vending machine', () => {
         // setup
         const machine = new Machine();
         const money = 100;
-        const expected = "You have deposited" + money;
+        const expected = "You have deposited Rs " + money;
 
         // exercise
-        const actual =  machine.displayMenu(money);
+        const actual =  machine.deposit(money);
 
         // assert
         expect(expected).toEqual(actual);
     });
 
-    // 3rd AC
-    it('Additional Money', () => {
-        // setup
-        const machine = new Machine();
-        const money = 100;
-        const money2 = 50;
-        const expected =  money+ money2;
+    // // 3rd AC
+    // it('Additional Money', () => {
+    //     // setup
+    //     const machine = new Machine();
+    //     const money = 100;
+    //     const money2 = 50;
+    //     const expected =  money+ money2;
 
-        // exercise
-        const actual =  machine.additionalMoney(money2);
+    //     // exercise
+    //     const actual =  machine.additionalMoney(money2);
 
-        // assert
-        expect(expected).toEqual(actual);
-    });
+    //     // assert
+    //     expect(expected).toEqual(actual);
+    // });
 
-    // 4th AC
-    it('Unavailable Item', () => {
-        // setup
-        const machine = new Machine();
-        const expected =  'Chocolate are unavailable';
-        const code = 2;
+    // // 4th AC
+    // it('Unavailable Item', () => {
+    //     // setup
+    //     const machine = new Machine();
+    //     const expected =  'Chocolate are unavailable';
+    //     const code = 2;
 
-        // exercise
-        const actual =  machine.unavailableItem(code);
+    //     // exercise
+    //     const actual =  machine.unavailableItem(code);
 
-        // assert
-        expect(expected).toEqual(actual);
-    });
+    //     // assert
+    //     expect(expected).toEqual(actual);
+    // });
 
 
 });
