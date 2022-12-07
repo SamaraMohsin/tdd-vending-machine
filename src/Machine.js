@@ -29,6 +29,9 @@ module.exports = class Machine {
                     let mymoney =  Math.abs(ths.items[0]['crisps']-this.total_deposit);
                     return `Your deposit is insufficient.  Please add ${mymoney} for this item`
                 }
+                else{
+                    return {item: 'mints', change: [20, 10]}
+                }
 
             }
             else if(code === 2){
